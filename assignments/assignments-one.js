@@ -18,12 +18,11 @@ alert(checkNumber(userInput))
 
 for(var i = 1 ; i <=20 ; i++){
     if(i%2==0){
-        console.log("EVEN")
+        alert(i + " EVEN")
         continue
     }
-   console.log("ODD")
+   alert(i + " ODD")
 }
-alert("check in console various output of the 2nd problem")
 
 //Role Access using switch-case
 
@@ -46,7 +45,7 @@ const checkRole = (userRolee) =>{
 }
 
 const userRole = prompt("Enter Role:")
-alert(checkRole(userRole))
+checkRole(userRole)
 
 //Total Price Function
 
@@ -72,6 +71,6 @@ const calFinalPrice = (couponCode,initialPrice) =>{
 }
 
 const couponCode = prompt("Enter the coupon code:")
-const initialPrice = prompt("Enger the price:")
+const initialPrice = prompt("Enter the price:")
 
 alert(calFinalPrice(couponCode,initialPrice))
