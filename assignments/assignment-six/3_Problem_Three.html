@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+    <head>
+        <title>Problem Three</title>
+    </head>
+
+    <body>
+
+        <h3>Create a button with text "Clicks: 0".
+        Initialize a variable count = 0.
+        On each button click, increment count and update the button text accordingly.
+        </h3>
+        
+        <button id="buttonOnClick"> Clicks: 0 </button>
+
+        <script>
+            let count = 0;
+
+            const buttonEventListner = document.getElementById("buttonOnClick")
+
+            buttonEventListner.addEventListener("click", ()=>{
+                count++;
+                buttonEventListner.textContent = `Clicks: ${count}`
+            })
+
+        </script>
+    </body>
+
+</html>
