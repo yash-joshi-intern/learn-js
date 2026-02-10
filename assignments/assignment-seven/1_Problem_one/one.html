@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<head>
+    <Title>Assignment Seven
+    </Title>
+</head>
+
+<body>
+    <h1> Problem_One</h1>
+
+        <label id="InputLabel">Enter the Data to upload into Local Storage & Session Storage:</label></br></br>
+        <input name="TempData" id="inputField"></br></br></br>
+
+        <button name="Save" id="saveButtonID">Save</button>
+        <button name="Load" id="loadButtonID">Load</button></br></br>
+
+        <label id="InputLabelLocal">Click Here to Clear the LocalStorage:</label></br></br>
+        <button id="clearLocalStorage"> LocalStorage CleanUp!</button>
+        </br></br>
+
+        <label id="InputLabelSession">Click Here to Clear the SessionStorage:</label></br></br>
+        <button id="clearSessionStorage"> Session CleanUp!</button>
+        </br></br>
+
+
+    <script>
+
+        const saveButton = document.getElementById("saveButtonID");
+        const loadButton = document.getElementById("loadButtonID");
+        const clearLocalStorage = document.getElementById("clearLocalStorage");
+        const clearSessionStorage = document.getElementById("clearSessionStorage");
+
+        saveButton.addEventListener("click", (e)=>{
+            e.preventDefault()
+            const nameField = document.getElementById("inputField");
+            const data = nameField.value;
+            console.log(nameField, nameField.value);
+
+            //store datat inside the sessionStorage
+            sessionStorage.setItem('tempID', data)
+
+            localStorage.setItem('tempID', data)
+
+            //storing cookie 
+            const nameee = document.cookie = "tempID=" + data
+            console.log(nameee)
+        })
+
+        loadButton.addEventListener("click", (e)=>{
+            e.preventDefault()
+            const sessionStored = sessionStorage.getItem('tempID');
+            console.log("SessionStorage Data: ", sessionStored);
+
+            const cookie = document.cookie;
+            console.log("Cookie:", cookie);
+
+            const localStore = localStorage.getItem('tempID')
+            console.log('LocalStorage Data: ', localStore )
+
+        })
+
+        clearLocalStorage.addEventListener("click", (e)=>{
+            e.preventDefault()
+            console.log("Local Data Is Being Deleted....")
+            localStorage.clear()
+            console.log("Local Data Deleted.")
+
+        })
+
+        clearSessionStorage.addEventListener("click", (e)=>{
+            e.preventDefault()
+            console.log("Session Data Is Being Deleted....")
+            sessionStorage.clear()
+            console.log("Session Data Deleted.")
+
+        })
+
+        <!-- When refresh the page the session and local strorage can be restore, after closing the tab and reopen it, can be restored -->
+    </script>
+
+</body>
+
+</html>
