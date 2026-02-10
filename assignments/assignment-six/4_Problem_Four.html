@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+    <head>
+        <title>
+            Problem Four
+        </title>
+
+        <style>
+
+            .tempBox{
+                width: 100px;
+                height: 100px;
+                border : solid black 5px;
+                background-color: rgb(253, 248, 248);
+                color : black;
+                text-align: center;
+            }
+            .active{
+                background-color: green;
+                color : white        
+            }
+            /* .inacrive{
+                background-color: aqua;
+                color: brown;
+            } */
+        </style>
+    </head>
+
+    <body>
+        <h3>
+            Create a < div > with a black border and white background.
+            Define a CSS class .active that changes the background to green and text color to white.
+            On click, toggle the .active class using classList.toggle().
+        </h3>
+
+        <div class="tempBox" id="togglee">
+            Click Here to See Toggees
+        </div>
+
+        <script>
+            const toggleSelector = document.getElementById("togglee")
+            // let count = 5
+            toggleSelector.addEventListener("click", ()=>{
+                // count--; 
+                toggleSelector.classList.toggle("active");
+                // if(count==2) toggleSelector.classList.toggle("inacrive")
+            })
+        </script>
+    </body>
+
+</html>

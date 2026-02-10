@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+    <head>
+        <title>Problem One - Six</title>
+    </head>
+    <body>
+        <h3>Q : -> Create an HTML file with a paragraph < p id="secret-message">Initial Text< /p> and a button.
+        On button click, select the paragraph using getElementById and change its text to "You found the secret message!".</h3>
+
+        <h4>Original Content</h4>
+        <p id="secret-message">Initial Text</p>
+        <button id="button-listner">
+            Click To See Changes
+        </button>
+        <script>
+
+            const paragraphArea = document.getElementById("secret-message")
+            const button = document.getElementById("button-listner")
+
+            button.addEventListener("click" , () =>{
+                paragraphArea.textContent = "You found the secret message!"
+            })
+
+        </script>
+    </body>
+
+</html>

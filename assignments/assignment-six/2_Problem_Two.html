@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+    <head>
+        <title>Problem Two</title>
+        <style>
+            .box{
+                width: 100px;
+                height: 100px;
+                padding: 10px;
+                border: 1px solid rgb(116, 47, 47);
+                background-color: rgb(40, 40, 132);
+            }
+            .box-white{
+                width: 30px;
+                height: 30px;
+                padding: 10px;
+                border: 1px solid rgb(255, 255, 255);
+                background-color: rgb(251, 251, 251);
+            }
+        </style>
+    </head>
+
+    <body>
+        <h3>Problem Two</h3>
+        <p>Create three elements with the class box.
+        Select all boxes using querySelectorAll and change the background color of each box to lightblue using forEach.</p>
+
+        <div class="box"></div>
+        <div class="box-white"></div>
+        <div class="box"></div>
+        <div class="box-white"></div>
+        <div class="box"></div>
+
+        <script>
+            const boxes = document.querySelectorAll(".box")
+
+            setTimeout(() => {
+                boxes.forEach(box => {
+                    box.style.backgroundColor = "red";
+                });
+            }, 5000);
+
+        </script>
+    </body>
+
+</html>
